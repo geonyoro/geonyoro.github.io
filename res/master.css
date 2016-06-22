@@ -113,8 +113,8 @@ header {
   width: 100%;
   position: relative;
   margin-top: 60px;
-  background-color: #010078;
-  /*background-image: url("/images/Background_JUMBO.jpeg");*/
+  /*background-color: #010078;*/
+  background-image: url("/images/pattern_2.png");
   /*background-size: cover;*/
   /*animation-name: animated;*/
   /*animation-duration: 4s;*/
@@ -175,7 +175,11 @@ header {
     margin-bottom: 1em;
     clear: both; }
   .midsection.web {
-    background-color: #010078;
+    /*background-color: #010078;*/
+    background-image: url("/images/pattern_1.png");
+    color: white; }
+  .midsection.desktop {
+    background-image: url("/images/pattern_4.jpeg");
     color: white; }
   .midsection.web .item:hover .background {
     background-color: rgba(0, 0, 0, 0.4); }
@@ -217,6 +221,7 @@ header {
       z-index: 1;
       background-color: white; }
       .midsection .item .image img {
+        height: 100%;
         width: 100%;
         transition: all 0.4s ease;
         background-color: white; }
@@ -224,7 +229,6 @@ header {
       border-top: 1px solid #aaa;
       background-color: white;
       text-decoration-style: none;
-      /*text-decoration: underline;*/
       position: relative;
       text-align: center;
       padding: 0.6em 0px;
@@ -254,7 +258,8 @@ header {
       .midsection .item:hover .link span {
         margin-left: 5px; }
     .midsection .item:hover img {
-      width: 110%; }
+      /*width: 110%;*/
+      transform: scale(1.1, 1.1); }
     .midsection .item:hover .title .text {
       /*color: white;*/ }
   .midsection .item:nth-child(3n+2) {

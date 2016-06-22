@@ -1,0 +1,82 @@
+<div class='news-item'>
+	<div class='container2'>
+		<h1>Account Registry Manager</h1>
+		<p>This app was created to help an administrator at a boy's club be able to better run the club better by managing the students, receipts and budgets from a computer. </p>
+		<p>The platform had 2 options for development, Desktop or Web Based. I chose to web since it is easier to develop and deploy and scales well for multiple users. I developed it in June 2016. It took <strong>2 weeks</strong> to develop and 1 day to test and verify.</p>
+
+		<h2>Implementation</h2>
+		<p>The Web App was implemented on <em>CodeIgniter</em> to try maintain an MVC approach to the system. It took the form of a single pager with an Iframe that would then contain on the necessary pages needed.</p>
+
+		<p>It contained the following features summarily:
+		<ul>
+			<li>Add Expenses and Incomes</li>
+			<li>Perform Budgeting at the start of the year</li>
+			<li>AutoCompletion Especially in Income and Invoices when typing names(Jquery)</li>
+			<li>Ability to print receipts and invoices under special formatting!</li>
+			<li>Pagination allowing for better navigation through records that may be in the hundreds.</li>
+			<li>Automatic <strong>conversion of payment number to words</strong> for the receipt.</li>
+			<li>Filters à la <em>MassMailer</em>, though not as powerful in that this does not contain conjunctions.</li>
+		</ul>
+		</p>
+
+		<p>The budgeting that is done at the start of the year, as per the client's request, automatically fills in the budget for the rest of the year, but one can edit the budget for a particular month after that. This is since, for this client, the budget per month is pretty much the same.</p>
+
+		<p>Notes under expenses and income are cut short on the view for presentations sake but during printing are enabled in full. The action column is also not shown during printing!</p>
+
+		<p>It was a fun project to undertaken albeit a bit challenging since it was my first time implementing the iframe type of system.</p>
+
+		<h2>Features</h2>
+		<div class='image-text'>
+			<img src="/images/registry_1.png" width="50px">
+			<div class='text'>Add Expense Page <br><br>Contains fields as illustrated with type and subtype options populated by values preset by admin.</div>
+		</div>
+		<div class='image-text'>
+			<img src="/images/registry_2.png" width="50px">
+			<div class='text'>The Date Paid uses Jquery Date Widget to assist in valid values.</div>
+		</div>
+		<div class='image-text'>
+			<img src="/images/registry_3.png" width="50px">
+			<div class='text'>The View Expenses field<br><br> To be noted is the filter area is normally collapsed to hide any filters. </div>
+		</div>
+		<div class='image-text'>
+			<img src="/images/registry_5.png" width="50px">
+			<div class='text'>The Filters Enabled <br><br> Clicking Add Filter allows one to add another filter that can work with any field. The values have a preset conjunction of OR or AND unlike in the <a href="#" data-location="mass_mailer.html">MassMailer</a> app.<br><br> If the field chosen is a date field, or reminder date, then the date completion widget is turned on. Autocomplete is still enabled on some fields.</div>
+		</div>
+		<div class='image-text'>
+			<img src="/images/Registry_6.png" width="50px">
+			<div class='text'>The Income Area <br><br> Pretty much the same as expenses but different field names.</div>
+		</div>
+		<div class='image-text'>
+			<img src="/images/Registry_7.png" width="50px">
+			<div class='text'>Monthly Summary <br><br> Has a monthly and accumulated side. It also features both Income and Expenditure tables.</div>
+		</div>
+		<div class='image-text'>
+			<img src="/images/Registry_8.png" width="50px">
+			<div class='text'>Budgeting. <br><br> At the bottom of the budget is the balance that turns red on a negative balance. One can also make a note for extra ordinary figures that show up. </div>
+		</div>
+		<div class='image-text'>
+			<img src="/images/Registry_9.png" width="50px">
+			<div class='text'>Budgeting. <br><br> It allows one to add budget items that shall show up in the monthly summary shown in the previous images.</div>
+		</div>
+		<div class='image-text'>
+			<img src="/images/Registry_12.png" width="50px">
+			<div class='text'>Budgeting. <br><br> One can edit any budgetary items, or delete any of them, having already selected the year and type of budget for which the edit is happening.</div>
+		</div>
+		<div class='image-text'>
+			<img src="/images/Registry_10.png" width="50px">
+			<div class='text'>Invoicing. <br><br> One can add invoices and also see invoices.</div>
+		</div>
+		<div class='image-text'>
+			<img src="/images/Registry_11.png" width="50px">
+			<div class='text'>Invoicing. <br><br> On clicking print for any invoice, this is what is displayed in the iframe for printing.</div>
+		</div>
+		<div class='image-text'>
+			<img src="/images/Registry_14.png" width="50px">
+			<div class='text'>Receipting. <br><br> The System automatically prints a receipt for incomes in the system, and <strong>automatically converts the cash to payment in words!</strong> I build this parser by hand! Can handle any amount under 1 trillion and handles even cents.</div>
+		</div>
+		<div class='image-text'>
+			<img src="/images/Registry_13.png" width="50px">
+			<div class='text'>Printing. <br><br> Printing pop-up that shows up when one presses the blue print button on the left-hand side.</div>
+		</div>
+	</div>
+</div>

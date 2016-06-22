@@ -149,8 +149,8 @@ header{
 	width: 100%;
 	position: relative;
 	margin-top: $header_height;
-	background-color: #010078;
-	/*background-image: url("/images/Background_JUMBO.jpeg");*/
+	/*background-color: #010078;*/
+	background-image: url("/images/pattern_2.png");
 	/*background-size: cover;*/
 	/*animation-name: animated;*/
 	/*animation-duration: 4s;*/
@@ -232,7 +232,12 @@ header{
 		clear:both;
 	}
 	&.web{
-		background-color: #010078;
+		/*background-color: #010078;*/
+		background-image: url("/images/pattern_1.png");
+		color: white;
+	}
+	&.desktop{
+		background-image: url("/images/pattern_4.jpeg");
 		color: white;
 	}
 	&.web .item:hover {
@@ -283,6 +288,7 @@ header{
 			z-index: 1;
 			background-color: white;
 			img{
+				height: 100%;
 				width: 100%;
 				transition: all 0.4s ease;
 				background-color: white;
@@ -291,9 +297,8 @@ header{
 
 		.title, .t2{
 			border-top: 1px solid $border_color;
-			background-color: white;
+			background-color: white;			
 			text-decoration-style: none;
-			/*text-decoration: underline;*/
 			position: relative;
 			text-align: center;
 			padding: 0.6em 0px;
@@ -302,7 +307,6 @@ header{
 			.text{
 				position: relative;
 				z-index: 4;
-
 			}
 		}
 
@@ -333,7 +337,8 @@ header{
 				}
 			}
 			img{
-				width: 110%;
+				/*width: 110%;*/
+				transform: scale(1.1,1.1);
 			}
 			.title .text{
 				/*color: white;*/
