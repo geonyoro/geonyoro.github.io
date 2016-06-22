@@ -1,0 +1,26 @@
+<div class='news-item'>
+	<div class='container2'>
+		<h1>VLC Wifi Controller</h1>
+		<p>This is an app I created for my Ubuntu Linux to thoroughly enhance my laziness. One can setup a hotspot on a phone or simply connect to the same wifi network a computer is connected to, and navigate using the browser to a certain ULR presented.</p>
+		<p>From there, you have a web based remote controller. And it is <strong>not limited</strong> by range or even clear line of sight between the remote and the screen.</p>
+		<p>It allows:
+		<ul>
+			<li>Display of current playing file.</li>
+			<li>Forward/Pause/Play/Rewind operations</li>
+			<li>Volume Manipulations</li>
+			<li>Switch off the app and VLC!</li>
+		</ul>
+		</p>
+
+		<h2>Implementation</h2>
+		<p>It took about 5 hours of development to get it running. It leverages the power of <em>dBus</em> interprocess communication API for communicating with VLC in the background.</p>
+
+		<p>The server process that runs the web interface is based on <em>Flask</em>. The app is written in python and thus uses the dbus python API. It can only run on Linux since Dbus is only based on linux. </p>
+
+		<h2>Features</h2>
+		<div class='image-text'>
+			<img src="/images/VLCController.png">
+			<div class='text'>The Player and the interface elements as presented on a phone.</div>
+		</div>
+	</div>
+</div>

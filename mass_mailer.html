@@ -1,0 +1,47 @@
+<div class='news-item'>
+	<div class='container2'>
+		<h1>Mass Mailer</h1>
+		<p>This was created to enable a client to send customized and templated mass emails from his computer to multiple email addresses from his database, and have custom fields inserted in each template that matched to certain fields from the database, e.g. customer name, phone number, items they purchased, date of purchase, site of purchase, place of residence etc.</p>
+		<p>It took about 30 hours to develop, with some of the time devoted to 
+		<ul>
+			<li>unittesting to ensure no bug failure</li>
+			<li>GUI design using Glade. The app runs on GTK 3.</li>
+		</ul>
+		</p>
+
+		<h2>Implementation</h2>
+		<p><em>In what I consider a twist of brilliant creativity</em>, I created filters for most places where data was being retrieved from the database. THe filters would be based on the columns in the database and would automatically convert date values and parse them accordinlgy based on the type of data. But what I found more itneresting and fun to implement was the ability to add multiple filters and using varying conjunctions such as AND and OR between queries, the ability to add braces to different parts, in essence, creating in GUI <strong>SQL Statements</strong> that could generate very specific data.</p>
+
+		<p>The application allowed one to use the filters to send mail to only certain customers who meet a certain criteria in the database .e.g only customers from Canada, only customers who purchased on such dates, only customers who have never been contacted before by using any combination of filters.</p>
+
+		<p>The app leverages on <a href="http://jinja.pocoo.org/">Jinja Templates</a> to allow insertion of values from the database.</p>
+
+		<p>The GUI was created in <a href="https://glade.gnome.org/">GLADE</a> and implemented using Gtk. Gtk was chosen because it creates much better looking applications that Tk, has a very powerful and rich toolset, allows for CSS for styling the front-end, and comes installed on most linux systems. The client had recently moved a Linux platform.</p>
+
+		<p>For ease of deployment, using <a href="https://www.debian.org/doc/manuals/maint-guide/build.en.html">dpkg-build</a>, I created a deb package that would allow him to install the application in one-click. It would automatically launch the processes for installing mysql, and other dependencies the app had such as gtk, pytgtk, pygobject etc.</p>
+
+		<p>By using return-path headers, the app is also able to keep track of bounced messages and store those in database where they can be dealt with later on.</p>
+
+		<h2>Features</h2>
+		<div class='image-text'>
+			<img src="/images/massmailer-1.png">
+			<div class='text'>Searching the data in the database.<br><br>Fields searched are mostly name and email.</div>
+		</div>
+		<div class='image-text'>
+			<img src="/images/massmailer-2.png">
+			<div class='text'>Templates that were previously created in the template tab can be selected here.<br><br>In the lower pane, a filter is shown. Note the brackets on the upper and lower side of the filter. Some conjunctions such as the <strong>'OR'</strong> displayed can have braces that allow for one to set the order of precedence of the filters.</div>
+		</div>
+		<div class='image-text'>
+			<img src="/images/massmailer-3.png">
+			<div class='text'>Statistics area.</div>
+		</div>
+		<div class='image-text'>
+			<img src="/images/massmailer-4.png">
+			<div class='text'>Templating and the insertion of template tags in a new file.</div>
+		</div>
+		<div class='image-text'>
+			<img src="/images/massmailer-5.png">
+			<div class='text'>Settings where credentials are inserted for the various accounts that help manage the whole thing.</div>
+		</div>
+	</div>
+</div>
